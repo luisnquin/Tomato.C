@@ -11,7 +11,6 @@
 #ifndef NOTIFY_H_
 #define NOTIFY_H_
 #include <ncurses.h>
-#include <stdio.h>
 
 /* Send a notification with sound */
 extern void notify(const char *);
