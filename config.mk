@@ -7,7 +7,7 @@
 #  `'							  
 # config.mk
 
-PREFIX  = /usr/local
+PREFIX  = /opt/local
 APPPREFIX = $(PREFIX)/share/applications
 LOGPREFIX = .local/share/tomato
 
@@ -18,9 +18,9 @@ LOGPREFIX = .local/share/tomato
 MPVTOGGLE = 1
 
 DFLAGS = -D_POSIX_C_SOURCE -DTOMATONOISE=\"$(PREFIX)/bin/tomatonoise\" -DLOGPREFIX=\"$(LOGPREFIX)\" -DLOGFILE=\"$(LOGPREFIX)/tomato.log\" -DTMPFILE=\"$(LOGPREFIX)/tmp.log\" -DTIMERFILE=\"$(LOGPREFIX)/time.log\" -DNOTEPADFILE=\"$(LOGPREFIX)/notepad.log\"
-CPPFLAGS = -I/usr/local/include
+CPPFLAGS = -I/opt/local/include
 CFLAGS  = -std=c99 -Wall -Wextra -pedantic -Wunused-result -Wno-unused-variable -Os ${DFLAGS}
-LDFLAGS = -L/usr/local/lib
+LDFLAGS = -L/opt/local/lib
 
 ifdef __APPLE__
 	ifdef MPVTOGGLE
